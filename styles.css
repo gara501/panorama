@@ -16,25 +16,41 @@ html, body {
   height: 100%;
   padding: 0;
   margin: 0;
-  overflow: hidden;
+  overflow: auto;
+  font-family: 'Oswald', sans-serif;
+}
+
+h2 {
+  font-size: 24px;
+  margin: 20px 0;
+}
+h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
 }
 
 .wrapper {
-  display: flex;
-  flex-flow: row wrap;
   height: 100%;
   position: relative;
   margin: 0 auto;
   width: 960px;
 }
+.model {
+  margin: 35px 0;
+}
+
+.demo {
+  display: flex;
+  flex-flow: row wrap;
+}
 
 .marzipano, .pannelum {
-  height: 50%;
+  height: 400px;
   width: 50%;
 }
 
-#pano {
-  position: absolute;
-  width: 50%;
-  height: 50%;
+#pano, #pano2 {
+  position: relative;
+  width: 400px;
+  height: 400px;
 }
