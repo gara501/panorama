@@ -1,7 +1,9 @@
 'use strict';
 
 function panel(id, model) {
-  var path = 'https://gara501.github.io/panorama/images/';
+  var local = false;
+  var path = local ? path = '/images/': 'https://gara501.github.io/panorama/images/';
+
   switch (model) {
     case 'hrv':
       pannellum.viewer(id, {
@@ -42,3 +44,4 @@ function panel(id, model) {
 
 panel('panorama2', 'hrv');
 panel('panorama', 'pilot');
+panel('panorama3', 'hrv');

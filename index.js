@@ -3,8 +3,10 @@
 
 function marzi(element, model) {
   // Create viewer.
+  var local = false;
+  var path = local ? path = '/images/': 'https://gara501.github.io/panorama/images/';
+
   var viewer = new Marzipano.Viewer(document.getElementById(element));
-  var path = 'https://gara501.github.io/panorama/images/';
   // Create source.
   switch (model) {
     case 'pilot':
@@ -42,3 +44,4 @@ function marzi(element, model) {
 
 marzi('pano', 'pilot');
 marzi('pano2', 'hrv');
+marzi('pano3', 'pilot');
