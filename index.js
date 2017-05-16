@@ -4,17 +4,17 @@
 function marzi(element, model) {
   // Create viewer.
   var viewer = new Marzipano.Viewer(document.getElementById(element));
-
+  var path = 'https://gara501.github.io/panorama/images/';
   // Create source.
   switch (model) {
     case 'pilot':
       var source = Marzipano.ImageUrlSource.fromString(
-        "/images/16_Pilot_Interior_360_o_{f}.jpg"
+        path + "16_Pilot_Interior_360_o_{f}.jpg"
       );
     break;
     case 'hrv':
       var source = Marzipano.ImageUrlSource.fromString(
-        "/images/17_HR-V_Interior_360_o_{f}.jpg"
+        path + "17_HR-V_Interior_360_o_{f}.jpg"
       );
     break;
     default:

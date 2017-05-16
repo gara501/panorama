@@ -1,7 +1,7 @@
 'use strict';
 
 function panel(id, model) {
-  console.log(pannellum);
+  var path = 'https://gara501.github.io/panorama/images/';
   switch (model) {
     case 'hrv':
       pannellum.viewer(id, {
@@ -10,12 +10,12 @@ function panel(id, model) {
         "maxLevel": 10,
         "showControls": true,
         "cubeMap": [
-            "/images/17_HR-V_Interior_360_o_0.jpg",
-            "/images/17_HR-V_Interior_360_o_1.jpg",
-            "/images/17_HR-V_Interior_360_o_2.jpg",
-            "/images/17_HR-V_Interior_360_o_3.jpg",
-            "/images/17_HR-V_Interior_360_o_4.jpg",
-            "/images/17_HR-V_Interior_360_o_5.jpg"
+            path + "17_HR-V_Interior_360_o_0.jpg",
+            path + "17_HR-V_Interior_360_o_1.jpg",
+            path + "17_HR-V_Interior_360_o_2.jpg",
+            path + "17_HR-V_Interior_360_o_3.jpg",
+            path + "17_HR-V_Interior_360_o_4.jpg",
+            path + "17_HR-V_Interior_360_o_5.jpg"
         ]
       });
       break;
@@ -26,12 +26,12 @@ function panel(id, model) {
         "maxLevel": 10,
         "showControls": true,
         "cubeMap": [
-            "/images/16_Pilot_Interior_360_o_0.jpg",
-            "/images/16_Pilot_Interior_360_o_1.jpg",
-            "/images/16_Pilot_Interior_360_o_2.jpg",
-            "/images/16_Pilot_Interior_360_o_3.jpg",
-            "/images/16_Pilot_Interior_360_o_4.jpg",
-            "/images/16_Pilot_Interior_360_o_5.jpg"
+            path + "16_Pilot_Interior_360_o_0.jpg",
+            path + "16_Pilot_Interior_360_o_1.jpg",
+            path + "16_Pilot_Interior_360_o_2.jpg",
+            path + "16_Pilot_Interior_360_o_3.jpg",
+            path + "16_Pilot_Interior_360_o_4.jpg",
+            path + "16_Pilot_Interior_360_o_5.jpg"
         ]
       });
       break;
