@@ -43,13 +43,52 @@ h3 {
   bottom: 5px;
   left: 0;
   right: 0;
-  justify-content: center;
+  justify-content: flex-end;
   position: absolute;
 }
 
-.controls.hide {
+.controls {
+  display: flex;
+}
+
+.controls .zoom,
+.controls .fullscreen  {
+  display: block;
+}
+
+.controls .hide {
   display: none;
 }
+
+.controls.zoom-on .zoom,
+.controls.fullscreen-on .fullscreen  {
+  display: block;
+}
+
+.controls.zoom-off .zoom,
+.controls.fullscreen-off .fullscreen  {
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .controls.zoom-mobile-off .zoom,
+  .controls.fullscreen-mobile-off .fullscreen  {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .controls.zoom-desktop-on .zoom,
+  .controls.fullscreen-desktop-on .fullscreen, {
+    display: block !important;
+  } 
+  
+  .controls.zoom-desktop-off .zoom,
+  .controls.fullscreen-desktop-off .fullscreen, {
+    display: none;
+  }  
+}
+
 
 .controls a {
   margin: 0 5px;
@@ -57,22 +96,6 @@ h3 {
 
 .fullscreen img, .zoom img {
   width: 20px;
-}
-
-.zoom.in .zoom-out {
-  display: none;
-}
-
-.zoom.in .zoom-in {
-  display: block;
-}
-
-.zoom.out .zoom-in {
-  display: none;
-}
-
-.zoom.out .zoom-out {
-  display: block;
 }
 
  .fullscreen-collapse {

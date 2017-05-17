@@ -1,76 +1,83 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>Single Resolution Cube | Marzipano</title>
-<meta name="description" content="Display a single-resolution cubemap image." />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>@-ms-viewport { width: device-width; }</style>
-<link rel="stylesheet" href="http://www.marzipano.net/demos/common/reset.css">
-<link rel="stylesheet" href="https://cdn.pannellum.org/2.3/pannellum.css"/>
-<link rel="stylesheet" href="styles.css">
-<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+  <title>Single Resolution Cube | Marzipano</title>
+  <meta name="description" content="Display a single-resolution cubemap image." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @-ms-viewport {
+      width: device-width;
+    }
+  </style>
+  <link rel="stylesheet" href="http://www.marzipano.net/demos/common/reset.css">
+  <link rel="stylesheet" href="https://cdn.pannellum.org/2.3/pannellum.css" />
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 </head>
+
 <body>
-<div class="wrapper">
-<div class="model">
-  <h2>PILOT</h2>
-  <div class="demo">
-    <div id="marzi1" class="marzipano">
-      <h3>Marzipano</h3>
-      <div class="panorama"></div>
-      <div class="controls">
-        <a href="#" class="zoom in">
-          <img class="icon zoom-in" src="images/zoom-in.svg">
-          <img class="icon zoom-out" src="images/zoom-out.svg">
-        </a>
-        <a href="#" class="fullscreen">
-          <img class="icon fullscreen" src="images/fullscreen.svg">
-          <img class="icon fullscreen-collapse" src="images/collapse.svg">
-        </a>
+  <div class="wrapper">
+    <div class="model">
+      <h2>PILOT</h2>
+      <div class="demo">
+        <div id="marzi1" class="marzipano">
+          <h3>Marzipano</h3>
+          <div class="panorama"></div>
+          <div class="controls">
+            <a href="#" class="zoom in">
+              <img class="icon zoom-in" src="images/zoom-in.svg">
+              <img class="icon zoom-out hide" src="images/zoom-out.svg">
+            </a>
+            <a href="#" class="fullscreen hide">
+              <img class="icon fullscreen" src="images/fullscreen.svg">
+              <img class="icon fullscreen-collapse" src="images/collapse.svg">
+            </a>
+          </div>
+        </div>
+        <div class="pannelum">
+          <h3>Pannelum</h3>
+          <div id="pannelum1"></div>
+        </div>
       </div>
     </div>
-    <div class="pannelum">
-      <h3>Pannelum</h3>
-      <div id="pannelum1"></div>
-    </div>
-  </div>
-  </div>
-  <div class="model">
-    <h2>HRV</h2>
-    <div class="demo">
-      <div id="marzi2" class="marzipano">
-        <h3>Marzipano</h3>
-        <div class="panorama"></div>
-        <div class="controls">
-          <a href="#" class="zoom in">
+    <div class="model">
+      <h2>HRV</h2>
+      <div class="demo">
+        <div id="marzi2" class="marzipano">
+          <h3>Marzipano</h3>
+          <div class="panorama"></div>
+          <div class="controls">
+            <a href="#" class="zoom in">
             <img class="icon zoom-in" src="images/zoom-in.svg">
             <img class="icon zoom-out" src="images/zoom-out.svg">
           </a>
-          <a href="#" class="fullscreen">
+            <a href="#" class="fullscreen">
             <img class="icon fullscreen" src="images/fullscreen.svg">
             <img class="icon fullscreen-collapse" src="images/collapse.svg">
           </a>
+          </div>
         </div>
-      </div>
-      <div class="pannelum">
-        <h3>Pannelum</h3>
-        <div id="pannelum2"></div>
+        <div class="pannelum">
+          <h3>Pannelum</h3>
+          <div id="pannelum2"></div>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
 
-<script src="http://www.marzipano.net/demos/common/es5-shim.js"></script>
-<script src="http://www.marzipano.net/demos/common/eventShim.js"></script>
-<script src="http://www.marzipano.net/demos/common/requestAnimationFrame.js" ></script>
+  <script src="http://www.marzipano.net/demos/common/es5-shim.js"></script>
+  <script src="http://www.marzipano.net/demos/common/eventShim.js"></script>
+  <script src="http://www.marzipano.net/demos/common/requestAnimationFrame.js"></script>
 
-<script src="marzipano.js" ></script>
-<script src="pannelum.js" ></script>
+  <script src="marzipano.js"></script>
+  <script src="pannelum.js"></script>
 
-<script src="index.js"></script>
-<script src="pan.js"></script>
-<script src="interior360.js"></script>
+  <script src="index.js"></script>
+  <script src="pan.js"></script>
+  <script src="interior360.js"></script>
 
 </body>
+
 </html>
