@@ -3,10 +3,11 @@
 
 function marzi(element, model) {
   // Create viewer.
-  var local = false;
+  var local = true;
   var path = local ? path = '/images/': 'https://gara501.github.io/panorama/images/';
 
   var viewer = new Marzipano.Viewer(document.getElementById(element));
+  var fullscreenToggleElement = document.querySelector('#fullscreenToggle');
   // Create source.
   switch (model) {
     case 'pilot':
@@ -42,6 +43,6 @@ function marzi(element, model) {
   scene.switchTo();
 }
 
-marzi('pano', 'pilot');
-marzi('pano2', 'hrv');
-marzi('pano3', 'pilot');
+//marzi('pano', 'pilot');
+//marzi('pano2', 'hrv');
+//marzi('pano3', 'pilot');

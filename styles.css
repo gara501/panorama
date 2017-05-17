@@ -34,6 +34,51 @@ h3 {
   overflow: hidden;
   width: 100%;
 }
+/* ------------------*/
+/* -Component Styles--*/
+/* ------------------*/
+.controls {
+  display: flex;
+  flex-flow: row wrap;
+  bottom: 5px;
+  left: 0;
+  right: 0;
+  justify-content: center;
+  position: absolute;
+}
+
+.controls.hide {
+  display: none;
+}
+
+.controls a {
+  margin: 0 5px;
+}
+
+.fullscreen img, .zoom img {
+  width: 20px;
+}
+
+.zoom.in .zoom-out {
+  display: none;
+}
+
+.zoom.in .zoom-in {
+  display: block;
+}
+
+.zoom.out .zoom-in {
+  display: none;
+}
+
+.zoom.out .zoom-out {
+  display: block;
+}
+
+ .fullscreen-collapse {
+  display: none;
+}
+
 
 .model {
   margin: 35px 0;
@@ -53,8 +98,8 @@ h3 {
   margin: 20px;
 }
 
-#pano, #pano2,
-#panorama, #panorama2 {
+.panorama,
+#pannelum1, #pannelum2 {
   position: absolute;
   top: 0;
   left: 0;

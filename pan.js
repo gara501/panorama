@@ -1,7 +1,7 @@
 'use strict';
 
 function panel(id, model) {
-  var local = false;
+  var local = true;
   var path = local ? path = '/images/': 'https://gara501.github.io/panorama/images/';
 
   switch (model) {
@@ -42,6 +42,5 @@ function panel(id, model) {
 
 }
 
-panel('panorama2', 'hrv');
-panel('panorama', 'pilot');
-panel('panorama3', 'hrv');
+panel('pannelum2', 'hrv');
+panel('pannelum1', 'pilot');
