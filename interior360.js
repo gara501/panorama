@@ -27,6 +27,7 @@ var interior360 = (function() {
 		marzi.zoomOut = marzi.root.querySelector('.zoom-out');
 		marzi.fullScreen = marzi.root.querySelector('.fullScreen');
 		marzi.controlsContainer = marzi.root.querySelector('.controls');
+    marzi.type = options.type || 'C';
 
 		if (options.controls.length > 0) {
 			var controlsClass = options.controls.split(' ');
@@ -77,7 +78,10 @@ var interior360 = (function() {
 
 	function render() {
 		// Create geometry.
-		var geometry = new Marzipano.CubeGeometry([{ tileSize: marzi.tileSize, size: marzi.size }]);
+    var geometry = new Marzipano.CubeGeometry([{ tileSize: marzi.tileSize, size: marzi.size }]);
+    if (marzi.type === 'E') {
+      geometry = new Marzipano.EquirectGeometry([{ width: 5200 }]);
+    }
 
 		// Create view.
 		//var limiter = Marzipano.RectilinearView.limit.traditional(marzi.zoomLimit, 100 * Math.PI / 180);
@@ -115,5 +119,15 @@ var panOptionsHrv = {
 	path: 'https://gara501.github.io/panorama/images/',
 	controls: 'zoom-desktop-on fullscreen-off zoom-mobile-off'
 };
+
+var panOptionsEq = {
+	root: 'marzi3',
+	image: 'equi.jpg',
+	path: 'https://gara501.github.io/panorama/images/',
+	controls: 'zoom-desktop-on fullscreen-off zoom-mobile-off',
+  type: 'E'
+};
+
 interior360.init(panOptions);
 interior360.init(panOptionsHrv);
+interior360.init(panOptionsEq);
