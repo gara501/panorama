@@ -85,7 +85,7 @@ var interior360 = (function() {
 
 		// Create view.
 		//var limiter = Marzipano.RectilinearView.limit.traditional(marzi.zoomLimit, 100 * Math.PI / 180);
-    var limiter = Marzipano.RectilinearView.limit.traditional(2048, 1.74, 1.74);
+    var limiter = Marzipano.RectilinearView.limit.traditional(4096, 1.74, 1.74);
 
 		var view = new Marzipano.RectilinearView(null, limiter);
 
