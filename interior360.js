@@ -59,8 +59,8 @@ var interior360 = (function() {
   }
 
 	function addZoomListener() {
-		var velocity = 0.8;
-		var friction = 0.2;
+		var velocity = 1;
+		var friction = 1;
 		var controls = marzi.viewer.controls();
 
 		controls.registerMethod(
