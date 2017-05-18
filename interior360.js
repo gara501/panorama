@@ -36,13 +36,30 @@ var interior360 = (function() {
 		}
 
 		marzi.source = Marzipano.ImageUrlSource.fromString(marzi.image);
-		addZoomListener();
+		zoomListener();
+    addZoomListener();
 		render();
 	}
 
+  function zoomListener() {
+    marzi.zoomIn.addEventListener('click', zoomInOut);
+    marzi.zoomOut.addEventListener('click', zoomInOut);
+  }
+
+  function zoomInOut(event) {
+    event.preventDefault();
+    if (event.target.classList.contains('zoom-in')) {
+      this.classList.add('hide');
+      this.parentNode.querySelector('.zoom-out').classList.remove('hide')
+    } else {
+      this.classList.add('hide');
+      this.parentNode.querySelector('.zoom-in').classList.remove('hide')
+    }
+  }
+
 	function addZoomListener() {
-		var velocity = 0.7;
-		var friction = 3;
+		var velocity = 0.8;
+		var friction = 0.2;
 		var controls = marzi.viewer.controls();
 
 		controls.registerMethod(
@@ -56,8 +73,6 @@ var interior360 = (function() {
 			new Marzipano.ElementPressControlMethod(marzi.zoomOut, 'zoom', velocity, friction),
 			true
 		);
-		console.log('Controles', controls);
-		console.log(event);
 	}
 
 	function render() {
@@ -65,7 +80,9 @@ var interior360 = (function() {
 		var geometry = new Marzipano.CubeGeometry([{ tileSize: marzi.tileSize, size: marzi.size }]);
 
 		// Create view.
-		var limiter = Marzipano.RectilinearView.limit.traditional(marzi.zoomLimit, 100 * Math.PI / 180);
+		//var limiter = Marzipano.RectilinearView.limit.traditional(marzi.zoomLimit, 100 * Math.PI / 180);
+    var limiter = Marzipano.RectilinearView.limit.traditional(2048, 1.74, 1.74);
+
 		var view = new Marzipano.RectilinearView(null, limiter);
 
 		// Create scene.
@@ -89,14 +106,14 @@ var panOptions = {
 	root: 'marzi1',
 	image: '16_Pilot_Interior_360_o_{f}.jpg',
 	path: 'https://gara501.github.io/panorama/images/',
-	controls: 'zoom-desktop-on fullscreen-off zoom-mobile-off',
+	controls: 'zoom-desktop-on fullscreen-off zoom-mobile-off'
 };
 
 var panOptionsHrv = {
 	root: 'marzi2',
 	image: '17_HR-V_Interior_360_o_{f}.jpg',
 	path: 'https://gara501.github.io/panorama/images/',
-	controls: '',
+	controls: 'zoom-desktop-on fullscreen-off zoom-mobile-off'
 };
 interior360.init(panOptions);
 interior360.init(panOptionsHrv);
