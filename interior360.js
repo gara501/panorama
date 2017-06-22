@@ -80,7 +80,7 @@ var interior360 = (function() {
 		// Create geometry.
     var geometry = new Marzipano.CubeGeometry([{ tileSize: marzi.tileSize, size: marzi.size }]);
     if (marzi.type === 'E') {
-      geometry = new Marzipano.EquirectGeometry([{ width: 5200 }]);
+      geometry = new Marzipano.EquirectGeometry([{ width: 3000 }]);
     }
 
 		// Create view.
